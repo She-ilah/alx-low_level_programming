@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	int n = 0';
+	int n = 0;
 
 	long m = 1, p = 2;
 
 	while (n < 50)
 	{
 	if (n == 0)
-	printf("%d", m);
+	printf("%ld", m);
 	else
 	if (n == 1)
 		printf(", %ld", p);
