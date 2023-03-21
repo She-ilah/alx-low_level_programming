@@ -15,6 +15,7 @@ int main(void)
 	p += m;
 	if (p % 2 == 0)
 	sum += p;
+	m = p - m;
 	++n;
 	}
 	printf("%ld\n", sum);
