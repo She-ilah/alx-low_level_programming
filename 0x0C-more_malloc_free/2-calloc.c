@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * set - fills the allocated memory
+ * *_set - fills the allocated memory
  * @n: memory
  * @a: character to be copied
  * @b: a to be copied b times
