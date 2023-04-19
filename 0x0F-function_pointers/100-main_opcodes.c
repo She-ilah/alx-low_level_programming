@@ -1,10 +1,11 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - entry point to funtion
- * @argv: array of arguments
  * @argc: number of arguments in the array
+ * @argv: array of arguments
+ *
  * Return: 0
  */
 int main(int argc, char *argv[])
@@ -35,7 +36,7 @@ int main(int argc, char *argv[])
 			printf("%02hhx\n", arr[n]);
 			break;
 		}
-		printf("%02hhx", arr[n]);
+		printf("%02hhx ", arr[n]);
 	}
 	return (0);
 }
