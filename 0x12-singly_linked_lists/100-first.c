@@ -3,7 +3,7 @@
 void first_func(void)__attribute__((constructor));
 
 /**
- * first - prints a given statement
+ * first_func - prints a given statement
  */
 void first_func(void)
 {
