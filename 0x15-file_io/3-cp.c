@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
 		if (start == -1 || rd == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Can't read from file %s\n", argv[1]);
+					"Error: Can't read from file %s\n", argv[1]);
 			free(scr);
 			exit(98);
 		}
