@@ -9,7 +9,7 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int len, num, fptr;
+	int len = 0, num, fptr;
 
 	if (filename == NULL)
 		return (-1);
