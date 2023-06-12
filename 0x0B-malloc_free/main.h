@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdlib.h>
+
 char **strtow(char *str);
 char *argstostr(int ac, char **av);
 void free_grid(int **grid, int height);
