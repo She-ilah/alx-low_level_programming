@@ -32,12 +32,13 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	/* While loops concatenate the strings and stores them in new_str*/
-	a = b = 0;
+	a = 0;
 	while (s1[a] != '\0')
 	{
 		new_str[a] = s1[a];
 		a++;
 	}
+	b = 0;
 	while (s2[b] != '\0')
 	{
 		new_str[a] = s2[b];
