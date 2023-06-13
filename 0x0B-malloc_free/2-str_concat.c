@@ -10,8 +10,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *new_str;
-	int i, n, len1, len2;
-	int a, b = 0;
+	int len1, len2;
 
 	/* If strings are NULL treat them as empty strings */
 	if (s1 == NULL)
@@ -20,9 +19,10 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 
 	/* Code determines the length of s1 and s2 */
-	for (i = 0; s1[i] != '\0'; i++)
+	len1 = len2 = 0;
+	while (s1[len1] != '\0')
 		len1++;
-	for (n = 0; s2[n] != '\0'; n++)
+	while (s2[len2] != '\0')
 		len2++;
 
 	/* Allocates memory for the concatenated string */
@@ -32,20 +32,19 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	/* While loops concatenate the strings and stores them in new_str*/
-	a = 0;
-	while (s1[a] != '\0')
+	len1 = len2 = 0;
+	while (s1[len1] != '\0')
 	{
-		new_str[a] = s1[a];
-		a++;
+		new_str[len1] = s1[len1];
+		len1++;
 	}
-	b = 0;
-	while (s2[b] != '\0')
+	while (s2[len2] != '\0')
 	{
-		new_str[a] = s2[b];
-		b++;
-		a++;
+		new_str[len1] = s2[len2];
+		len2++;
+		len1++;
 	}
-	new_str[a] = '\0';
+	new_str[len1] = '\0';
 
 	return (new_str);
 }
