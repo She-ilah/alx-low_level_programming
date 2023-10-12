@@ -1,4 +1,4 @@
-0x17 Doubly Linked Lists
+0x17 doubly linked lists
 
 0. Print list
 1. List length

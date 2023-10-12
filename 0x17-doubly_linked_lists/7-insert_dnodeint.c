@@ -3,8 +3,8 @@
 /**
  * *insert_dnodeint_at_index - Function inserts new node at a given position
  * @h: head
- * @idx: position to add new node
- * @n: node to be added
+ * @idx: new node position
+ * @n: node.
  * Return: address or new node or NULL upon failure
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)

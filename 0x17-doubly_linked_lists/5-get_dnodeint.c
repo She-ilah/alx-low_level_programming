@@ -2,8 +2,8 @@
 
 /**
  * *get_dnodeint_at_index - Function returns nth node of linked list.
- * @head: head of the node
- * @index: index of the node
+ * @head: head.
+ * @index: index.
  * Return: nth node or NULL upon failure
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
