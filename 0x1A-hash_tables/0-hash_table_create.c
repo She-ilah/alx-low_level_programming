@@ -1,19 +1,29 @@
 #include "hash_tables.h"
 
 /**
- * hash_djb2 - Function generates a random number
- * @str: String
- * Return: Hash number upon success
+ * hash_table_create - Function creates a hash table.
+ * @size: Hash tables size
+ * Return: Created hash table or NULL upon failure
  */
-unsigned long int hash_djb2(const unsigned char *str)
+hash_table_t *hash_table_create(unsigned long int size)
 {
-	unsigned long int hash;
-	int n;
+	hash_table_t *table;
+	hash_node_t **array;
+	unsigned long int n;
 
-	hash = 5381;
-	while ((n = *str++))
-	{
-		hash = ((hash << 5) + hash) + n;
-	}
-	return (hash);
+	table = malloc(sizeof(hash_table_t));
+	if (table == NULL)
+		return (NULL);
+
+	array = malloc(sizeof(hash_node_t *) * size);
+	if (array == NULL)
+		return (NULL);
+
+	for (n = 0; n < size; n++)
+		array[n] = NULL;
+
+	table->array = array;
+	table->size = size;
+
+	return (table);
 }
